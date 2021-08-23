@@ -1,5 +1,5 @@
 // Write your JavaScript code here!
-
+console.log("test")
 window.addEventListener("load", function() {
 
    let listedPlanets;
