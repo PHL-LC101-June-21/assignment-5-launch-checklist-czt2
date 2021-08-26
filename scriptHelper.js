@@ -41,13 +41,14 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
 
    const copilotStatus = document.getElementById("copilotStatus");
-   copilotStatus.innerHTML = `CoPilot ${copilot} is ready for launch`;
+   copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
 
    const launchStatus = document.getElementById("launchStatus");
    
    if(fuelLevel < 10000) {
-        launchStatus.innerHTML = 'Fuel level too low for launch';
+        launchStatus.innerHTML = 'Shuttle not ready for launch';
         launchStatus.style.color  = "red";
+        document.getElementById("fuelStatus").innerHTML = `Fuel level too low for launch`;
    } else if(cargoLevel > 10000){
        launchStatus.innerHTML = "Shuttle not ready for launch";
        launchStatus.style.color  = "red";
