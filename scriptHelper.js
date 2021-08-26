@@ -4,9 +4,9 @@ require('isomorphic-fetch');
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
    // Here is the HTML formatting for our mission target div.
    let missionTarget = document.getElementById("missionTarget");
-   missionTarget.innerHTML = `
+   missionTarget.innerHTML = 
    
-                <h2>Mission Destination</h2>
+                `<h2>Mission Destination</h2>
                 <ol>
                     <li>Name: ${name}</li>
                     <li>Diameter: ${diameter}</li>
@@ -14,8 +14,8 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                     <li>Distance from Earth: ${distance} </li>
                     <li>Number of Moons: ${moons} </li>
                 </ol>
-                <img src="${imageUrl}">
-   `
+                <img src="${imageUrl}">`
+   
 }
 
 function validateInput(testInput) {
@@ -38,10 +38,10 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     list.style.visibility = "visible";
 
    const pilotStatus = document.getElementById("pilotStatus");
-   pilotStatus.innerHTML = `Pilot ${pilotValue} is ready for launch`;
+   pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
 
    const copilotStatus = document.getElementById("copilotStatus");
-   copilotStatus.innerHTML = `CoPilot ${copilotValue} is ready for launch`;
+   copilotStatus.innerHTML = `CoPilot ${copilot} is ready for launch`;
 
    const launchStatus = document.getElementById("launchStatus");
    
