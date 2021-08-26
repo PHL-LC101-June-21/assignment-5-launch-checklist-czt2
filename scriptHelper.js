@@ -45,18 +45,21 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
    const launchStatus = document.getElementById("launchStatus");
    
+   if(fuelLevel >= 10000 || cargoLevel <= 10000){
+    launchStatus.innerHTML = "Shuttle is Ready for Launch"
+    launchStatus.style.color  = "green";
+    }
+
    if(fuelLevel < 10000) {
         launchStatus.innerHTML = 'Shuttle not ready for launch';
         launchStatus.style.color  = "red";
         document.getElementById("fuelStatus").innerHTML = `Fuel level too low for launch`;
-   } else if(cargoLevel > 10000){
+   } 
+   if(cargoLevel > 10000){
        launchStatus.innerHTML = "Shuttle not ready for launch";
        launchStatus.style.color  = "red";
-   } else if(fuelLevel >= 10000 || cargoLevel <= 10000){
-       launchStatus.innerHTML = "Shuttle is Ready for Launch"
-       launchStatus.style.color  = "green";
-   }
-
+       document.getElementById("cargoStatus").innerHTML = `Cargo level too high for launch`;
+   } 
 }
 
 async function myFetch() {
