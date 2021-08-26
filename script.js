@@ -8,6 +8,7 @@ window.addEventListener("load", function() {
    let listedPlanetsResponse = myFetch();
    let form = document.querySelector("form");
    let list = document.getElementById("faultyItems");
+   list.style.visibility = "hidden";
 
    form.addEventListener("submit", function(event){
         event.preventDefault();
@@ -36,21 +37,4 @@ window.addEventListener("load", function() {
        addDestinationInfo(document, planet.name, planet.diameter, planet.star, planet.distance, planet.moons, planet.image);
    });
    
-//    let form = document.querySelector("form");
-//    form.addEventListener("submit", function(event){
-//         event.preventDefault();
-//         let pilotInput = this.document.querySelector("input[name=pilotName]");
-//         let copilotInput = this.document.querySelector("input[name=copilotName]");
-//         let fuelInput = this.document.querySelector("input[name=fuelLevel]");
-//         let cargoInput = this.document.querySelector("input[name=cargoMass]");
-
-//         const pilotValue = pilotInput.value;
-//         const copilotValue = copilotInput.value;
-//         const fuelValue = fuelInput.value;
-//         const cargoValue = cargoInput.value;
-//         let list = document.getElementById("faultyItems");
-
-//         formSubmission(document, list, pilotValue, copilotValue, fuelValue, cargoValue);
-//    });
-
 });
