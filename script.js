@@ -17,7 +17,7 @@ window.addEventListener("load", function() {
        addDestinationInfo(document, planet.name, planet.diameter, planet.star, planet.distance, planet.moons, planet.imageUrl);
    })
    
-   const form = document.getElementById("testForm");
+   const form = document.querySelector("form");
    form.addEventListener("submit", function(event){
         event.preventDefault();
         let pilotInput = this.document.querySelector("input[name=pilotName]");
